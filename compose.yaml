@@ -5,7 +5,9 @@ services:
     ports:
       # - "127.0.0.1:2375:2375"
       # TODO : Change this to a more secure setup
-      - "2375:2375"
+      # - "2375:2375"
+      - "${LOCAL_IP}:2375:2375"
+
     environment:
       CONTAINERS: 1 # 🔥 Active l'accès aux containers
       EXEC: 0        # Empêcher l'exécution de commandes
